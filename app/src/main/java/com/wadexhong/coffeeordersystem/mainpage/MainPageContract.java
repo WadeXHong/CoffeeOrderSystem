@@ -11,10 +11,12 @@ public interface MainPageContract {
 
     interface View extends BaseView<Presenter> {
 
+        void setItemAdapter(ItemsAdapter itemAdapter);
     }
 
     interface Presenter extends BasePresenter {
 
+        void setItemAdapter();
     }
 
 }

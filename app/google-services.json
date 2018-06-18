@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1012542996234-0lksbpsj7294gv3c3hiouo182fl0fj5t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wadexhong.coffeeordersystem",
+            "certificate_hash": "4f1d67698e0ce80f0f8777d0b0eb49a2f5711e16"
+          }
+        },
+        {
           "client_id": "1012542996234-0qinjj976hat6teeqq2h9vlgg903rs9h.apps.googleusercontent.com",
           "client_type": 3
         },
@@ -33,8 +41,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1012542996234-0qinjj976hat6teeqq2h9vlgg903rs9h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="item_height_big">120dp</dimen>
+    <dimen name="item_height_small">60dp</dimen>
+    <dimen name="margin">8dp</dimen>
+    <dimen name="listitem_height">100dp</dimen>
 </resources>

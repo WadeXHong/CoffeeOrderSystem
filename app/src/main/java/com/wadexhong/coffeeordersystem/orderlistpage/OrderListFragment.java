@@ -17,10 +17,14 @@ public class OrderListFragment extends Fragment implements OrderListContract.Vie
 
     private OrderListContract.Presenter mPresenter;
 
+    public static OrderListFragment newInstance() {
+        return new OrderListFragment();
+    }
+
+
     public OrderListFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

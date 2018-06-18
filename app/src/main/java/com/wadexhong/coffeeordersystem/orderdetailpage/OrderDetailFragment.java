@@ -35,12 +35,12 @@ public class OrderDetailFragment extends Fragment implements OrderDetailContract
      * @return A new instance of fragment OrderDetailFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static OrderDetailFragment newInstance(String param1, String param2) {
+    public static OrderDetailFragment newInstance() {
         OrderDetailFragment fragment = new OrderDetailFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
+//        Bundle args = new Bundle();
+//        args.putString(ARG_PARAM1, param1);
+//        args.putString(ARG_PARAM2, param2);
+//        fragment.setArguments(args);
         return fragment;
     }
 

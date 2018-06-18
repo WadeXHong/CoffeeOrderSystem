@@ -12,6 +12,12 @@ public interface CoffeeContract {
 
     interface Presenter extends BasePresenter{
 
+        void transToMainPage();
+
+        void transToOrderDetail();
+
+        void transToOrderList();
+
     }
 
 }
