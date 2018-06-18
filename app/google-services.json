@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1012542996234",
+    "firebase_url": "https://coffee-order-system.firebaseio.com",
+    "project_id": "coffee-order-system",
+    "storage_bucket": "coffee-order-system.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1012542996234:android:06b88321b63a066f",
+        "android_client_info": {
+          "package_name": "com.wadexhong.coffeeordersystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1012542996234-0qinjj976hat6teeqq2h9vlgg903rs9h.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1012542996234-0qinjj976hat6teeqq2h9vlgg903rs9h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4kipnh6Jp0OH1YJJ9SLb979CCVr8fuYU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
