@@ -54,7 +54,7 @@ public class CoffeePresenter implements CoffeeContract.Presenter {
         }else {
             fragmentTransaction.show(mMainPageFragment);
         }
-        if (mMainPagePresenter == null) mMainPagePresenter = new MainPagePresenter(mMainPageFragment);
+        if (mMainPagePresenter == null) mMainPagePresenter = new MainPagePresenter(mMainPageFragment, this);
 
         if (mOrderListFragment != null){
             fragmentTransaction.hide(mOrderDetailFragment);
@@ -78,6 +78,9 @@ public class CoffeePresenter implements CoffeeContract.Presenter {
 
         if (mMainPageFragment != null){
             fragmentTransaction.hide(mMainPageFragment);
+        }
+        if (mOrderListFragment != null){
+            fragmentTransaction.hide(mOrderListFragment);
         }
 
 

@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.wadexhong.coffeeordersystem.R;
 
@@ -22,6 +23,8 @@ public class MainPageFragment extends Fragment implements MainPageContract.View{
 
     private RecyclerView mRecyclerViewItem;
     private RecyclerView mRecyclerViewList;
+    private Button mButton;
+
 
     public static MainPageFragment newInstance(){
         return new MainPageFragment();
@@ -37,14 +40,23 @@ public class MainPageFragment extends Fragment implements MainPageContract.View{
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main_page, container, false);
 
+        mButton = view.findViewById(R.id.fragment_mainpage_button_confirm);
         mRecyclerViewItem = view.findViewById(R.id.fragment_mainpage_recyclerview_item);
         mRecyclerViewList = view.findViewById(R.id.fragment_mainpage_recyclerview_list);
+
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPresenter.pressConfirm();
+            }
+        });
 
         mRecyclerViewItem.setLayoutManager(new GridLayoutManager(getContext(), 2, OrientationHelper.HORIZONTAL, false));
         mPresenter.setItemAdapter();
 
         mRecyclerViewList.setLayoutManager(new LinearLayoutManager(getContext()));
         mPresenter.setListAdapter();
+
 
 
         return view;

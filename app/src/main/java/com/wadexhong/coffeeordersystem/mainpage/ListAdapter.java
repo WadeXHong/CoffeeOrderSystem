@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -51,6 +52,10 @@ public class ListAdapter extends RecyclerView.Adapter {
         return mItemArrayList.size();
     }
 
+    public ArrayList<Item> getItemArrayList() {
+        return mItemArrayList;
+    }
+
     public class ListViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView mImageView;
@@ -73,6 +78,7 @@ public class ListAdapter extends RecyclerView.Adapter {
             mNoSugar = itemView.findViewById(R.id.item_main_listitem_radiobutton_no);
             mIcedGroup = itemView.findViewById(R.id.item_main_listitem_radiogroup_type);
             mSugarGroup = itemView.findViewById(R.id.item_main_listitem_radiogroup_sugar);
+
 
 
 

@@ -24,6 +24,8 @@ public interface MainPageContract {
         void setListAdapter();
 
         void addOrder(Item item);
+
+        void pressConfirm();
     }
 
 }
