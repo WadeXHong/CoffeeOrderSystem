@@ -10,10 +10,32 @@ public class Item {
     private String mName;
     private Long mPrice;
 
+    private boolean mIsIce;
+
+    private boolean mIsSugar;
+
     public Item(String image, String name, Long price) {
         mImage = image;
         mName = name;
         mPrice = price;
+        mIsIce = true;
+        mIsSugar = true;
+    }
+
+    public boolean isIce() {
+        return mIsIce;
+    }
+
+    public void setIce(boolean ice) {
+        mIsIce = ice;
+    }
+
+    public boolean isSugar() {
+        return mIsSugar;
+    }
+
+    public void setSugar(boolean sugar) {
+        mIsSugar = sugar;
     }
 
     public String getImage() {

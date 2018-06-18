@@ -1,5 +1,6 @@
 package com.wadexhong.coffeeordersystem.mainpage;
 
+import com.wadexhong.coffeeordersystem.Objects.Item;
 import com.wadexhong.coffeeordersystem.model.CallBacks;
 import com.wadexhong.coffeeordersystem.model.FireBaseHelper;
 
@@ -11,6 +12,7 @@ public class MainPagePresenter implements MainPageContract.Presenter {
 
     private final MainPageContract.View mView;
     private ItemsAdapter mItemAdapter;
+    private ListAdapter mListAdapter;
 
     public MainPagePresenter(MainPageContract.View view) {
         mView = view;
@@ -26,7 +28,7 @@ public class MainPagePresenter implements MainPageContract.Presenter {
 
     @Override
     public void setItemAdapter() {
-        mItemAdapter = new ItemsAdapter(FireBaseHelper.getInstance().getItems(new CallBacks() {
+        mItemAdapter = new ItemsAdapter(this ,FireBaseHelper.getInstance().getItems(new CallBacks() {
             @Override
             public void onCompleted() {
                 mItemAdapter.notifyDataSetChanged();
@@ -34,5 +36,16 @@ public class MainPagePresenter implements MainPageContract.Presenter {
         }));
 
         mView.setItemAdapter(mItemAdapter);
+    }
+
+    @Override
+    public void setListAdapter() {
+        mListAdapter = new ListAdapter();
+        mView.setListAdapter(mListAdapter);
+    }
+
+    @Override
+    public void addOrder(Item item) {
+        mListAdapter.addItem(item);
     }
 }

@@ -4,6 +4,7 @@ package com.wadexhong.coffeeordersystem.mainpage;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -37,9 +38,13 @@ public class MainPageFragment extends Fragment implements MainPageContract.View{
         View view = inflater.inflate(R.layout.fragment_main_page, container, false);
 
         mRecyclerViewItem = view.findViewById(R.id.fragment_mainpage_recyclerview_item);
-        mRecyclerViewList = view.findViewById(R.id.fragment_order_list_recyclerview);
+        mRecyclerViewList = view.findViewById(R.id.fragment_mainpage_recyclerview_list);
+
         mRecyclerViewItem.setLayoutManager(new GridLayoutManager(getContext(), 2, OrientationHelper.HORIZONTAL, false));
         mPresenter.setItemAdapter();
+
+        mRecyclerViewList.setLayoutManager(new LinearLayoutManager(getContext()));
+        mPresenter.setListAdapter();
 
 
         return view;
@@ -53,5 +58,10 @@ public class MainPageFragment extends Fragment implements MainPageContract.View{
     @Override
     public void setItemAdapter(ItemsAdapter itemAdapter) {
         mRecyclerViewItem.setAdapter(itemAdapter);
+    }
+
+    @Override
+    public void setListAdapter(ListAdapter listAdapter) {
+        mRecyclerViewList.setAdapter(listAdapter);
     }
 }

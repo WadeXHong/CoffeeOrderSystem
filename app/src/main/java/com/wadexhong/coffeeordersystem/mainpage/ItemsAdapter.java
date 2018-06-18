@@ -24,9 +24,11 @@ import java.util.concurrent.Executors;
 
 public class ItemsAdapter extends RecyclerView.Adapter {
 
+    private MainPageContract.Presenter mPresenter;
     private ArrayList<Item> mItemArrayList;
 
-    public ItemsAdapter(ArrayList<Item> itemArrayList){
+    public ItemsAdapter(MainPageContract.Presenter mainPagePresenter, ArrayList<Item> itemArrayList){
+        mPresenter = mainPagePresenter;
         mItemArrayList = itemArrayList;
     }
 
@@ -52,6 +54,12 @@ public class ItemsAdapter extends RecyclerView.Adapter {
         public ItemsViewHolder(View itemView) {
             super(itemView);
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mPresenter.addOrder(mItemArrayList.get(getLayoutPosition()));
+                }
+            });
             mImageView = itemView.findViewById(R.id.item_main_coffeeitem_imageview);
         }
 
